@@ -1,1 +1,12 @@
 # This file contains recursive sources that require this package
+R-bold
+R-fauxpas
+R-natserv
+R-ritis
+R-rredlist
+R-solrium
+R-taxize
+R-vcr
+R-webmockr
+R-wikitaxa
+R-worrms
