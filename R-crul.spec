@@ -4,15 +4,12 @@
 #
 Name     : R-crul
 Version  : 0.7.0
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/crul_0.7.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crul_0.7.0.tar.gz
 Summary  : HTTP Client
 Group    : Development/Tools
 License  : MIT
-Requires: R-curl
-Requires: R-httpcode
-Requires: R-urltools
 BuildRequires : R-curl
 BuildRequires : R-httpcode
 BuildRequires : R-urltools
@@ -36,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546660543
+export SOURCE_DATE_EPOCH=1552731519
 
 %install
-export SOURCE_DATE_EPOCH=1546660543
+export SOURCE_DATE_EPOCH=1552731519
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -75,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library crul|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  crul || :
 
 
 %files
@@ -115,3 +111,33 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/crul/help/paths.rds
 /usr/lib64/R/library/crul/html/00Index.html
 /usr/lib64/R/library/crul/html/R.css
+/usr/lib64/R/library/crul/tests/test-all.R
+/usr/lib64/R/library/crul/tests/testthat/helper-crul.R
+/usr/lib64/R/library/crul/tests/testthat/test-async.R
+/usr/lib64/R/library/crul/tests/testthat/test-asyncvaried.R
+/usr/lib64/R/library/crul/tests/testthat/test-auth.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-delete.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-get.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-head.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-patch.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-post.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-put.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-query.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-status.R
+/usr/lib64/R/library/crul/tests/testthat/test-client-verb.R
+/usr/lib64/R/library/crul/tests/testthat/test-client.R
+/usr/lib64/R/library/crul/tests/testthat/test-handle.R
+/usr/lib64/R/library/crul/tests/testthat/test-headers.R
+/usr/lib64/R/library/crul/tests/testthat/test-mocking.R
+/usr/lib64/R/library/crul/tests/testthat/test-ok.R
+/usr/lib64/R/library/crul/tests/testthat/test-paginator.R
+/usr/lib64/R/library/crul/tests/testthat/test-paths.R
+/usr/lib64/R/library/crul/tests/testthat/test-proxies.R
+/usr/lib64/R/library/crul/tests/testthat/test-request.R
+/usr/lib64/R/library/crul/tests/testthat/test-response.R
+/usr/lib64/R/library/crul/tests/testthat/test-retry.R
+/usr/lib64/R/library/crul/tests/testthat/test-set.R
+/usr/lib64/R/library/crul/tests/testthat/test-url_build_parse.R
+/usr/lib64/R/library/crul/tests/testthat/test-url_fetch.R
+/usr/lib64/R/library/crul/tests/testthat/test-user-agent.R
+/usr/lib64/R/library/crul/tests/testthat/test-utils.R
