@@ -4,7 +4,7 @@
 #
 Name     : R-crul
 Version  : 0.7.4
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/crul_0.7.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crul_0.7.4.tar.gz
 Summary  : HTTP Client
