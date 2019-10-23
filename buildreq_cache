@@ -1,4 +1,5 @@
-0.8.0
+0.8.4
 R-curl
 R-httpcode
 R-urltools
+util-linux
