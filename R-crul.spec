@@ -4,7 +4,7 @@
 #
 Name     : R-crul
 Version  : 0.9.0
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/crul_0.9.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/crul_0.9.0.tar.gz
 Summary  : HTTP Client
@@ -25,33 +25,26 @@ BuildRequires : R-urltools
 BuildRequires : buildreq-R
 
 %description
-crul
-====
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/ropensci/crul.svg?branch=master)](https://travis-ci.org/ropensci/crul)
-[![Build status](https://ci.appveyor.com/api/projects/status/i29vjv239yf05qsi?svg=true)](https://ci.appveyor.com/project/sckott/crul)
-[![codecov](https://codecov.io/gh/ropensci/crul/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/crul)
-[![cran checks](https://cranchecks.info/badges/worst/crul)](https://cranchecks.info/pkgs/crul)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/crul)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/crul)](https://cran.r-project.org/package=crul)
+and mocking HTTP requests. The package is built on R6, and takes
 
 %prep
 %setup -q -c -n crul
+cd %{_builddir}/crul
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573099220
+export SOURCE_DATE_EPOCH=1589770330
 
 %install
-export SOURCE_DATE_EPOCH=1573099220
+export SOURCE_DATE_EPOCH=1589770330
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
