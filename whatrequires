@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 R-bold
 R-fauxpas
+R-gfonts
 R-natserv
 R-ritis
 R-rredlist
